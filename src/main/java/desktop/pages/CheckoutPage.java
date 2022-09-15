@@ -2,7 +2,6 @@ package desktop.pages;
 
 import abstractclasses.page.AbstractPage;
 import driver.SingletonDriver;
-import io.cucumber.java.Transpose;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -39,9 +38,9 @@ public class CheckoutPage extends AbstractPage {
     public WebElement expiration;
     @FindBy(xpath = "//input[@name='credit-card-number']")
     public WebElement ccNumber;
-    @FindBy(xpath = "//div[@class='wrapper']/dl[1]/dd")
+    @FindBy(xpath = "//div[@class='wrapper']/div[2]/dl/dd")
     public WebElement subTotal;
-    @FindBy(xpath = "//div[@class='wrapper']/dl[2]/dd")
+    @FindBy(xpath = "//div[@class='wrapper']/div[3]/dl/dd")
     public WebElement delivery;
     @FindBy(xpath = "//dd[@class='text-right total-tax']")
     public WebElement vatTax;
@@ -51,13 +50,13 @@ public class CheckoutPage extends AbstractPage {
     public WebElement buyNowButton;
     @FindBy(xpath="//div[@id='emailAddress']//div[@class='error-block']")
     public WebElement emailAddressError;
-    @FindBy(xpath="//div[@id='delivery-fullName']//div[@class='error-block']")
+    @FindBy(xpath="//div[@id='delivery-fullName-errors'][@class='error-block']")
     public WebElement fullNameError;
-    @FindBy(xpath="//div[@id='delivery-addressLine1']//div[@class='error-block']")
+    @FindBy(xpath="//div[@id='delivery-addressLine1-errors'][@class='error-block']")
     public WebElement addressLine1Error;
-    @FindBy(xpath="//div[@id='delivery-city']//div[@class='error-block']")
+    @FindBy(xpath="//div[@id='delivery-city-errors'][@class='error-block']")
     public WebElement cityError;
-    @FindBy(xpath="//div[@id='delivery-postCode']//div[@class='error-block']")
+    @FindBy(xpath="//div[@id='delivery-postCode-errors'][@class='error-block']")
     public WebElement postcodeError;
     @FindBy(xpath = "//iframe[@name='braintree-hosted-field-number']")
     public WebElement iFrameCC;

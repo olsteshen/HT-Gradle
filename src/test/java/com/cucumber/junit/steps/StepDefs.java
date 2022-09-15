@@ -43,7 +43,7 @@ public class StepDefs {
         searchResultsPageObject = homePageObject.enterSearchTerm(searchTerm);
     }
 
-    @Then("^the search results are( not|) displayed$")
+    @Then("^the search results are displayed$")
     public void pageWithSearchResultsIsPresent() {
         Assertions.assertThat(searchResultsPageObject.isSearchResultsPresent())
                 .overridingErrorMessage("Search results are not displayed")
